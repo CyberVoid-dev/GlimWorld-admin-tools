@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote Manager</title>
+  <meta name="description" content="Glimworld Vote Manager">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    *{scroll-behavior:smooth}
+    body{font-family:system-ui,-apple-system,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;margin:0;line-height:1.6}
+    .card{background:rgba(255,255,255,.98);border-radius:20px;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,.15);transition:all .3s;border:2px solid transparent}
+    .card:hover{transform:translateY(-6px);box-shadow:0 15px 50px rgba(0,0,0,.25);border-color:rgba(102,126,234,.3)}
+    .btn{background:#667eea;color:#fff;padding:14px 28px;border-radius:12px;text-decoration:none;display:inline-block;font-weight:700;transition:all .3s;border:none;cursor:pointer;font-size:16px;text-align:center}
+    .btn:hover,.btn:focus{background:#764ba2;transform:scale(1.05);box-shadow:0 8px 20px rgba(118,75,162,.4);outline:3px solid rgba(255,255,255,.5);outline-offset:2px}
+    .btn-secondary{background:#fff;color:#667eea;border:2px solid #667eea}
+    .btn-secondary:hover,.btn-secondary:focus{background:#667eea;color:#fff}
+    .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,.1);padding:16px 0}
+    .nav a{color:#667eea;text-decoration:none;font-weight:600;padding:8px 16px;border-radius:8px;transition:all .2s;display:inline-block}
+    .nav a:hover,.nav a:focus{background:rgba(102,126,234,.1);outline:2px solid #667eea;outline-offset:2px}
+    .feature-box{padding:20px;border-radius:16px;transition:all .3s;cursor:pointer;border:2px solid transparent}
+    .feature-box:hover,.feature-box:focus-within{transform:scale(1.05);border-color:rgba(102,126,234,.5);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+    .value-card{padding:16px;border-radius:12px;transition:all .3s;border:2px solid transparent}
+    .value-card:hover,.value-card:focus-within{transform:translateY(-4px);border-color:rgba(102,126,234,.3)}
+    .link-card{display:block;padding:14px;border-radius:10px;transition:all .2s;border:2px solid transparent;text-decoration:none}
+    .link-card:hover,.link-card:focus{background:rgba(102,126,234,.05);border-color:#667eea;transform:translateX(8px);outline:none}
+    .badge{display:inline-block;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;transition:transform .2s}
+    .badge:hover{transform:scale(1.1)}
+    .hero{text-align:center;padding:60px 20px;animation:fadeIn 1s}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .section{margin-bottom:40px;animation:fadeIn 1s}
+    @media(max-width:768px){
+      .hero h1{font-size:2.5rem!important}
+      .nav{padding:12px 0}
+      .nav-links{display:flex;flex-wrap:wrap;gap:8px;justify:center}
+      .card{padding:20px}
+      .btn{padding:12px 20px;font-size:14px}
+    }
+    .skip-link{position:absolute;top:-40px;left:0;background:#667eea;color:#fff;padding:8px;z-index:200;text-decoration:none;border-radius:4px}
+    .skip-link:focus{top:0;outline:3px solid #fff}
+    :focus-visible{outline:3px solid #667eea;outline-offset:2px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
+  </style>
+</head>
+
+<body>
+  <main id="main-content" class="max-w-6xl mx-auto p-4 md:p-6">
+
+    <header class="hero text-white">
+      <div role="img" aria-label="GlimWorld logo" style="font-size:4rem;margin-bottom:16px">🌟</div>
+      <h1 class="text-4xl md:text-6xl font-black mb-3">Glimworld Vote Manager</h1>
+      <p class="text-xl md:text-2xl mb-2">Please enter the admin password to continue</p>
+
+      <div class="mt-8 flex flex-wrap gap-4 justify-center">
+        <a href="https://padlet.com/GlimWorldForever/glimworld-romw9j63mcbzwbjb" target="_blank" class="btn">
+          Sign in
+        </a>
+      </div>
+    </header>
+    <!-- FOOTER -->
+    <footer class="text-center text-white py-8">
+      <p class="text-lg font-bold mb-3">Build. Share. Collaborate. Keep it real. 🚀</p>
+      <p class="opacity-90 mb-2">2026 GlimWorld - A Community for Creators</p>
+      <p class="text-sm opacity-75">
+        GlimWorld is not associated with Gimkit or its affiliates in any way.
+        All copyrights are property of their respective owners.
+      </p>
+
+      <div class="mt-6 flex flex-wrap justify-center gap-4">
+        <a href="https://padlet.com/GlimWorldForever/glimworld-romw9j63mcbzwbjb" target="_blank" class="text-white hover:underline">Padlet</a>
+        <a href="https://github.com/coolsparkz/GlimWorld" target="_blank" class="text-white hover:underline">GitHub</a>
+        <a href="https://coolsparkz.github.io/GlimWorld/" target="_blank" class="text-white hover:underline">Website</a>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
